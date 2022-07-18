@@ -1,0 +1,59 @@
+print("welcome to the hospital, please enter the following as you wait for your doctor")#add comments via string to introduce the users
+name = str(input("Please enter your name:"))
+height = float(input("Enter your height in cm: " ))
+weight = float(input("Enter your weight in kg: "))
+
+print("")
+print("please read the following")
+print("1.one-twentytwo")
+print("2.twenty three-fifty six")
+print("3.fifty seven-onehundred and twenty")
+print("")
+item = int (input ("please select the option for your estimated age range: "))
+
+
+BMI = weight / (height/100)**2 #write out the calculations for BMI (will do operation automatically)
+BMI = round(BMI,2)
+print ("BMI rounded is:",BMI)
+input("you may need to make diet changes now onwards depending on your weight")#add comments again via string to make user feel comfortable(it is an interactive program)
+
+if BMI <= 18.4:
+    print("You are underweight")#let the user know thier health status
+elif BMI <= 24.9:
+    print("You are healthy :) .")
+elif BMI <= 29.9:
+    print("You are over weight.")
+elif BMI <= 34.9:
+    print("You are severely over weight.")
+elif BMI <= 39.9: 
+    print("You are obese.") 
+else:
+    print(" Sadly, you are severely obese.") #let the user know thier health status
+ 
+
+ 
+weight = int(input("Enter your weight in KG: "))
+height = int(input("Enter your height in cm: "))
+age = int(input("Enter your age in years: "))
+isMale = str(input("Are you male? (y/n)"))
+
+if isMale == "y":
+    isMale = True
+elif isMale == "n":
+    isMale = False
+else:
+    print("Error")
+    quit()
+    
+    
+
+# Mifflin St. Jeor Equation for males
+if isMale:
+    bmr = 66.5 + (13.75 * weight) + (5 * height) - (6.755 * age)
+else:
+    bmr = 655.1 + (9.6 * weight) + (1.8 * height) - (4.7 * age)
+
+bmr = round(bmr)
+print(bmr)
+
+
