@@ -1,0 +1,23 @@
+print("Welcome to the hospital, please entetr the following as you waiting for your doctor")
+name = str(input("please enter your name:"))
+height = float(input("Enter your height in cm: "))
+weight = float(input("Enter your weight in kg: "))
+Num = 0
+while (Num<= 0) or (Num > 120):
+    Num = int(input("enter age:"))
+BMI = weight / (height/100)**2# you must write out the calculation for BMI 
+print("your BMI is",BMI)# Write out the calculation for BMI
+BMI = round(BMI, 2)
+print("bmi rounded to 2 decimal placesis:",BMI)
+if BMI <= 18.4:
+    print("You are underweight.")#let the user know their BMI
+elif BMI <= 24.9:
+    print("You are healthy.")#Tell the user to carry on on their healthy life
+elif BMI <= 29.9:
+    print("You are over weight.")#The user have to be more healthier
+elif BMI <= 34.9:
+    print("You are severely over weight.")# Tell the user to go to dietition
+elif BMI <= 39.9:
+    print("You are obese.")
+else:
+    print("You are severely obese.")#let the user know their health status
